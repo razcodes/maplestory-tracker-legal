@@ -1,0 +1,23 @@
+<!-- The app's icon (same artwork as assets/icon.ico): gradient maple leaf, rate line dark inside it and gold outside. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="5 2 90 90">
+  <defs>
+    <linearGradient id="mark-fill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffc85c" />
+      <stop offset="0.55" stop-color="#f29b38" />
+      <stop offset="1" stop-color="#d9702a" />
+    </linearGradient>
+    <path id="mark-leaf" d="M50 4 57 21 66 17 62 39 77 30 80 37 93 35 87 48 92 52 72 66 75 74 57 70 52.5 72.5 53 90 47 90 47.5 72.5 43 70 25 74 28 66 8 52 13 48 7 35 20 37 23 30 38 39 34 17 43 21Z" />
+    <g id="mark-line">
+      <polyline points="24,58 36,46 50,56 77.8,26.4" fill="none" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
+      <polygon points="84,19.8 82.6,32.3 71.7,22" stroke-width="2.5" stroke-linejoin="round" />
+    </g>
+    <clipPath id="mark-inside"><use href="#mark-leaf" /></clipPath>
+    <mask id="mark-outside" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100">
+      <rect width="100" height="100" fill="#fff" />
+      <use href="#mark-leaf" fill="#000" />
+    </mask>
+  </defs>
+  <use href="#mark-leaf" fill="url(#mark-fill)" />
+  <use href="#mark-line" clip-path="url(#mark-inside)" fill="#1a1d24" stroke="#1a1d24" />
+  <use href="#mark-line" mask="url(#mark-outside)" fill="#ffc85c" stroke="#ffc85c" />
+</svg>
